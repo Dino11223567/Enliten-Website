@@ -23,7 +23,7 @@ def index():
     return render_template("home.html",TestQuestion=question_words)
 
 
-@app.route("/About", methods=['GET'])
+@app.route("/Question", methods=['GET'])
 def About():
     return("Currently Under Construction")
 
