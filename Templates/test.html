@@ -8,6 +8,8 @@
 <body>
     <h1>Hello, The ProtoWebsite is currently under construction!</h1>
     <h2>My name is {{name}}</h2>
-    <p>{{TestQuestion}}</p>
+    {% for question in TestQuestion %}
+      <p>{{question}}</p>
+    {% endfor %}
 </body>
 </html>
