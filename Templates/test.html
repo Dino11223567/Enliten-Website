@@ -1,15 +1,68 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head>
-    <title>Home Page - ProtoWebsite</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="QuizBowl Practice Tool" />
+    <meta name="keywoards" content="Altamont, Scholars Bowl, Learn, Enliten,Practice Tool" />
+    <meta name="author" content="Henry the Dinosaur" />
+
+    <title>Enliten Practice | Welcome</title>
+    <link rel="stylesheet" href="css/stylesheet1.css" />
 </head>
+
 <body>
-    <h1>Hello, The ProtoWebsite is currently under construction!</h1>
-    <h2>My name is {{name}}</h2>
-    {% for question in TestQuestion %}
-      <p>{{question}}</p>
-    {% endfor %}
+    <header>
+        <div class="container">
+            <div id="Logo">
+                <h1>Enliten</h1>
+            </div>
+            <nav> <!-- Links to Login and Practice and stuff-->
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="home.html">About</a></li>
+                    <li><a href="home.html">Login</a></li>
+                    <li><a href="home.html">Practice</a></li>
+                    <li><a href="home.html">Profile</a></li>
+                </ul>
+                <form>
+                    <input type="username" placeholder="Username" />
+                    <input type="password" placeholder="Password" />
+                    <button type="submit" class="Submit_button">Login</button>
+                </form>
+            </nav>
+        </div>
+    </header>
+    <!-- Places for more links in case they want additional features-->
+    <!--Will Also include a page to question room and maybe a daily fact-->
+    <section id="Portal">
+        <div class="container">
+            <h1>Daily Facts</h1>
+            <nav>
+                <ul>
+                    <li>Link1</li>
+                    <li>Link2</li>
+                    <li>Link3</li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <!-- Places where they can read question-->
+    <section id="question">
+        <div class="container">
+            <h1>Sample Question</h1>
+            <p>
+                {% for question in TestQuestion %}
+                {{question}}
+                {% endfor %}
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>I will eat you if you try to copy this. Copyright &copy; 2018</p>
+    </footer>
 </body>
 </html>
