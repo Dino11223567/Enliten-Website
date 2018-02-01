@@ -61,7 +61,10 @@ header .current a{
 }
 footer {
     padding: 20px;
-    margin-top: 200px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
     color: #777;
     background-color: #DEEBED;
     text-align: center;
