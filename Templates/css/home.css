@@ -59,3 +59,11 @@ header .current a{
     color:#777;
     font-weight:bold;
 }
+footer {
+    padding: 20px;
+    margin-top: 200px;
+    color: #777;
+    background-color: #DEEBED;
+    text-align: center;
+}
+ 
