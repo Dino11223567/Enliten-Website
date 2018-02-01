@@ -1,4 +1,4 @@
-from flask import Flask, flash, redirect, render_template, request, session, abort
+from flask import Flask, flash, redirect, render_template, request, session, abort, jsonify
 from flask_bootstrap import Bootstrap
 import time
 
@@ -19,13 +19,14 @@ def index():
         question_words.append(words[i])
         string = " ".join(question_words)
         i += 1
-        time.sleep(1)
     return render_template("home.html",TestQuestion=question_words)
 
 
 @app.route("/Question", methods=['GET'])
-def About():
-    return("Currently Under Construction")
+def Question():
+        return render_template("question.html")
+   
+        
 
 @app.route("/Login", methods=['GET'])
 def Login():
@@ -43,8 +44,3 @@ def Profile():
 
 if __name__ == "__main__":
     app.run()
-
-    #Run In command prompt "python (file-path)"
-    #Open http://localhost:5000/
-    #Finish this tutorial https://pythonspot.com/flask-web-app-with-python/
-    #Documentation for Flask http://flask.pocoo.org/docs/0.12/
