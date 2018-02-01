@@ -1,65 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="QuizBowl Practice Tool" />
-    <meta name="keywoards" content="Altamont, Scholars Bowl, Learn, Enliten,Practice Tool" />
-    <meta name="author" content="Henry the Dinosaur" />
-    <title>Enliten | Welcome</title>
-    <!-- Create a static/styles/home.css?q=1280549787 folder next to template -->
-    <link rel="stylesheet" href="static/styles/home.css?q=1280547785" />
-    <script>window.jQuery || document.write('<script src="{{url_for('static', filename='jquery.js') }}">\x3C/script>')</script>
-</head>
-<body>
-  
-    <header>
-        <div class="container">
-            <div id="Logo">
-                <h1>Enliten</h1>
-            </div>
-            <nav>
-                <!-- Links to Login and Practice and stuff-->
-                <ul>
-                    <li class="current"><a href="/">Home</a></li>
-                    <li class="current"><a href="Question">Question Room</a></li>
-                    <li class="current"><a href="Login">Login</a></li>
-                    <li class="current"><a href="Practice">Practice</a></li>
-                    <li class="current"><a href="Profile">Profile</a></li>
-                </ul>          
-            </nav>
-        </div>
-    </header>
 
-    <!-- Places for more links in case they want additional features-->
-    <!--Will Also include a page to question room and maybe a daily fact-->
-    <section id="Portal">
-        <div class="container">
-            <h1>Daily Facts</h1>
-            <nav>
-                <ul>
-                    <li>Link1</li>
-                    <li>Link2</li>
-                    <li>Link3</li>
-                </ul>
-            </nav>
-        </div>
-    </section>
-    <!-- Places where they can read question-->
-    <section id="question">
-        <div class="container">
-            <h1>Sample Question</h1>
-            <p>
-                {% for question in TestQuestion %}
-                {{question}}
-                {% endfor %}
-            </p>
-        </div>
-    </section>
-    
-    <footer>
-        <p>I will eat you if you try to copy this. Copyright &copy; 2018</p>
-    </footer>
-    
-</body>
-</html>
+{% extends 'base.html' %}
+<!-- Places for more links in case they want additional features-->
+<!--Will Also include a page to question room and maybe a daily fact-->
+{% block content %}
+<section id="Portal">
+    <div class="container">
+        <h1>Daily Facts</h1>
+        <nav>
+            <ul>
+                <li>Link1</li>
+                <li>Link2</li>
+                <li>Link3</li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<!-- Places where they can read question-->
+<section id="question">
+    <div class="container">
+        <h1>Sample Question</h1>
+        <p>
+            {% for question in TestQuestion %}
+            {{question}}
+            {% endfor %}
+        </p>
+    </div>
+</section>
+{% endblock %}
