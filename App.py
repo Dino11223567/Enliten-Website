@@ -40,6 +40,18 @@ def Practice():
 def Profile():
     return("Currently Under Construction")
 
+app.route("/background_process", methods=['GET'])
+def background_process():
+    try:
+        answer = request.ars.get('response')
+        if str(answer).lower == "yes":
+            return jsonify(result="Good")
+        else:
+            return jsonify(result="wrong")
+    except Exception as e:
+        return("currently Under Construction")
+
+
 
 
 if __name__ == "__main__":
