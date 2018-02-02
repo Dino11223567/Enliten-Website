@@ -1,23 +1,28 @@
 {% extends 'base.html' %}
-<!--CODING SPECIFIC TO THIS HTML STARTS HERE-->
-{%block script %}
-<!--specific scripts goes here -->
-<script src="static/scripts/test.js?q=1282527785" type="text/javascript"></script>
-{% endblock %}
+<!-- Places for more links in case they want additional features-->
+<!--Will Also include a page to question room and maybe a daily fact-->
 {% block content %}
-      <section id="question">
-        <div class="container">
-            <h1>Sample Question</h1>
-            <p>
-              Are you excited about this website?
-            </p>
-            <form id="sample_form" action="#">
-                <input id="sample" type="text" name="response" />
-                <button class="default_button" id="sample_button" href="#" onclick="popup()" value="Click Me!">Submit</button>
-            </form>
-            </div>
-    </section>
+<section id="Portal">
+    <div class="container">
+        <h1>Daily Facts</h1>
+        <nav>
+            <ul>
+                <li>Link1</li>
+                <li>Link2</li>
+                <li>Link3</li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<!-- Places where they can read question-->
+<section id="question">
+    <div class="container">
+        <h1>Sample Question</h1>
+        <p>
+            {% for question in TestQuestion %}
+            {{question}}
+            {% endfor %}
+        </p>
+    </div>
+</section>
 {% endblock %}
-
-</body>
-</html>
