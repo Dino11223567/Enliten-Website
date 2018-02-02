@@ -1,28 +1,28 @@
-{% extends 'base.html' %}
+{% extends 'test.html' %}
 <!-- Places for more links in case they want additional features-->
 <!--Will Also include a page to question room and maybe a daily fact-->
 {% block content %}
-<section id="Portal">
-    <div class="container">
-        <h1>Daily Facts</h1>
-        <nav>
-            <ul>
-                <li>Link1</li>
-                <li>Link2</li>
-                <li>Link3</li>
-            </ul>
-        </nav>
-    </div>
-</section>
-<!-- Places where they can read question-->
-<section id="question">
-    <div class="container">
-        <h1>Sample Question</h1>
-        <p>
-            {% for question in TestQuestion %}
-            {{question}}
-            {% endfor %}
-        </p>
-    </div>
-</section>
+    <section id="Portal">
+        <div class="container">
+            <h1>Daily Facts</h1>
+            <nav>
+                <ul>
+                    <li>Link1</li>
+                    <li>Link2</li>
+                    <li>Link3</li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+    <!-- Places where they can read question-->
+    <section id="question">
+        <div class="container">
+            <h1>Sample Question</h1>
+            <p>
+                {% for question in TestQuestion %}
+                {{question}}
+                {% endfor %}
+            </p>
+        </div>
+    </section>
 {% endblock %}
