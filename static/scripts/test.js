@@ -1,10 +1,7 @@
-$(function () {
-    $('a#process_input').bind('click', function () {
-        $.getJSON('/background_process', {
-            proglang: $('input[name="response"]').val(),
-        }, function (data) {
-            $("#result").text(data.result);
-        });
-        return false;
+$(document).ready(function () {
+    $("#sample_button").bind("click", function () {
+
+        alert("The paragraph was clicked.");
+
     });
 });
