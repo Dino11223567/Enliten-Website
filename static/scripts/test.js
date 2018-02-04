@@ -1,7 +1,11 @@
 $(document).ready(function () {
     $("#sample_button").bind("click", function () {
-
-        alert("The paragraph was clicked.");
-
+        $.getJSON("/background_process", {
+            response: $("input[name='response'").val(),
+        },
+            function (data) {
+                $("#result").text(data.result);
+            });
+        return false
     });
 });
