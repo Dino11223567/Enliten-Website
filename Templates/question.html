@@ -1,21 +1,21 @@
-{% set value = 'no spaces' %}
 {% extends 'test.html' %}
+<!--CODING SPECIFIC TO THIS HTML STARTS HERE-->
 {%block script %}
-<script src="static/scripts/test.js?q=1282527785" type="text/javascript"></script>
+<!--specific scripts goes here -->
+    <script src="static/scripts/test.js?q=1282527785" type="text/javascript"></script>
 {% endblock %}
-
 {% block content %}
-<section id="question">
-    <div class="container">
-        <h1>Sample Question</h1>
-        <p>
-            Are you excited about this website?
-        </p>
-        <form id="sample_form" action="#">
-            <input id="sample_input" type="text" name="response" autocompletel = "off" />
-            <button class="default_button" id="sample_button" href="#" onclick="popup()" value="Click Me!">Submit</button>
-        </form>
-        <p id="result"></p>
-    </div>
-</section>
+      <section id="question_room">
+        <div class="container">
+            <h1>Sample Question</h1>
+            <p id="question">
+              {{question}}
+            </p>
+            <form id="sample_form" action="#">
+                <input id="sample" type="text" name="response" autocomplete="off" />
+                <button class="default_button" id="sample_button" href="#" value="Click Me!">Submit</button>
+            </form>
+            <p id="result"></p>
+            </div>
+    </section>
 {% endblock %}
