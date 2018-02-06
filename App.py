@@ -1,11 +1,32 @@
 from flask import Flask, flash, redirect, render_template, request, session, abort, jsonify
 from flask_bootstrap import Bootstrap
-import time
+import time, json,urllib3, random
+from random import randint
+
+#Variables and Lists
+database= []
+
+global question_info
+global answer
+question_info={}
+answer=""
+
+#Functions
+
+with open("database/test.json") as json_data:    
+    for line in json_data:
+        database.append(json.loads(line))
+        
+
+#Python Flask 
+
 
 
 app = Flask(__name__)
 Bootstrap(app)
 app.secret_key = "howsitgoingbro1234508234129458751239487"
+
+
 
 @app.route("/", methods=['GET'])
 def index():
@@ -25,7 +46,10 @@ def index():
 
 @app.route("/Question", methods=['GET'])
 def Question():
-        return render_template("question.html")
+    index = random.randint(0,len(database)-1)
+    question_info = database[index]
+    answer=question_info['answer']    
+    return render_template("question.html",question=question_info['question'])
    
 @app.route("/Login", methods=['GET'])
 def Login():
@@ -44,6 +68,8 @@ def background_process():
        ans = request.args.get('response')
        print(ans)
        return jsonify(result=ans)
+
+        
 
 
 
