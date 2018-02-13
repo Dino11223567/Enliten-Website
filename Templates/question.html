@@ -2,18 +2,21 @@
 <!--CODING SPECIFIC TO THIS HTML STARTS HERE-->
 {%block script %}
 <!--specific scripts goes here -->
-    <script src="static/scripts/test.js?q=1282527785" type="text/javascript"></script>
+    <script src="static/scripts/question.js?q=1282527785" type="text/javascript"></script>
 {% endblock %}
 {% block content %}
       <section id="question_room">
         <div class="container">
-            <h1>Sample Question</h1>
+            <h1>Question</h1>
+            <form class="question_gui">
+                <button class="default_button" id="Next_Question" href="#">Next</button>
+            </form>
             <p id="question">
               {{question}}
             </p>
-            <form id="sample_form" action="#">
-                <input id="sample" type="text" name="response" autocomplete="off" />
-                <button class="default_button" id="sample_button" href="#" value="Click Me!">Submit</button>
+            <form class="answer_gui" action="#">
+                <input id="user_answer" type="text" name="response" autocomplete="off" />
+                <button class="default_button" id="submit_answer" href="#">Submit Answer</button>
             </form>
             <p id="result"></p>
             </div>
