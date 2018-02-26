@@ -1,0 +1,30 @@
+from flask import Flask, flash, redirect, render_template, request, session, abort, jsonify
+from flask_bootstrap import Bootstrap
+import time, json,urllib3, random, sqlite3
+from random import randint
+
+
+class Q_Tasks(object):  
+
+    Question_Info = []
+
+    def __init__(self):
+        return(None)
+
+    def fetch(self):         
+        conn = sqlite3.connect('database/Enliten.db')
+        c = conn.cursor()
+        c.execute("SELECT Question, answer FROM Questions ORDER BY Random() LIMIT 1")
+        Q_Tasks.Question_Info = c.fetchone()
+
+    def Question_str(self):
+
+        return(Q_Tasks.Question_Info[0])
+
+    def Answer_str(self):
+
+        return(Q_Tasks.Question_Info[1])
+
+    """description of class"""
+
+
