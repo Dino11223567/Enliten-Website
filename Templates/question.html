@@ -9,15 +9,12 @@
         <div class="container">
             <h1>Question</h1>
             <form class="question_gui">
-                <button class="default_button" id="Next_Question" href="#">Next</button>
-            </form>
-            <p id="question">
-              {{question}}
-            </p>
-            <form class="answer_gui" action="#">
-                <input id="user_answer" type="text" name="response" autocomplete="off" />
+                <button class="default_button" id="next_question" href="#">Next Question</button>
+                <button class="default_button" id="buzz" href="#">Buzz</button>
                 <button class="default_button" id="submit_answer" href="#">Submit Answer</button>
+                <input id="user_answer" type="text" name="response" autocomplete="off" />                
             </form>
+            <p id="question">{{question}}</p>
             <p id="result"></p>
             </div>
     </section>
