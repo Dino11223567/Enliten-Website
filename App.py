@@ -50,11 +50,11 @@ def background_process():
 
     elif type == "Answer":
         if response == Q.Answer_str():
-            return jsonify(result = Q.Answer_str())
+            return jsonify(result = "Answer:" + Q.Answer_str())
         else:
-            return jsonify(result = "WRONGGGGG")
+            return jsonify(result = "'"+response + "' is Incorrect!")
     elif type == "End":
-        return jsonify(result = Q.Answer_str())
+        return jsonify(result = "Answer:" + Q.Answer_str())
 
 
 if __name__ == "__main__":
