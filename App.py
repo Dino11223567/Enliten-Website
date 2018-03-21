@@ -2,7 +2,7 @@ from flask import Flask, flash, redirect, render_template, request, session, abo
 from flask_bootstrap import Bootstrap
 import time, json,urllib3, random, sqlite3
 from random import randint
-import Enliten_Functions
+import Functions
 
 
 #Functions
