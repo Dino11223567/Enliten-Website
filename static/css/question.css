@@ -1,175 +1,51 @@
-i {
-  margin-right: 5px;
-}
-
-textarea {
-  box-sizing: border-box;
-  border: solid #58585b 3px;
-  overflow: auto;
-  border-radius: 5px;
-  vertical-align: top;
-  background-color: #ffffff;
-}
-
-.question_gui {
-  width: 80%;
-  margin: 0px auto 50px auto;
-  flex: 1;
-}
-
-.default_button {
-  border-radius: 10px;
-  color: #ffffff;
-  font-family: Verdana;
-  font-size: 10px;
-  font-weight: bold;
-  padding: 10px 15px;
-  text-align: center;
-  border: solid #334258 1px;
-}
-
-.question_box {
-  width: 100%;
-  height: 180px;
-  background-color: #e7e7e7;
-  color: #181818;
-  font-weight: 200;
+body {
+  margin: 0;
+  font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #777;
   text-align: left;
-  word-wrap: normal;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
 }
 
-.result_box {
-  width: 100%;
-  height: 50px;
+
+header {
+  background: #DEEBED;
+  color: #777;
+  min-height: 70px;
+  display:flex;
+  flex-direction:row;
+  padding:20px;
+}
+
+.navigation_bar {
+  display: flex;
+  margin:auto;
+  list-style-type: none;
+}
+
+.Logo{
+  padding:10px;
+  margin: 0 10px;
+}
+
+.navigation_bar a {
+  color: #777;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
   font-weight: bold;
+  padding: 0 10px 0 10px;
+  display:inline;
 }
 
-.answer_box {
-  display: none;
-  box-sizing: border-box;
-  width: 100%;
-  height: 50px;
-  border: solid #3f7dbe 3px;
-  border-radius: 5px;
-}
-
-#next_question {
-  background-color: #3D94F6;
-  background-image: -webkit-linear-gradient(#3D94F6 5%, #1E62D0 100%);
-  background-image: linear-gradient(#3D94F6 5%, #1E62D0 100%);
-}
-
-#buzz {
-  float: right;
-  background-color: #d0451b;
-  background-image: -webkit-linear-gradient(#d0451b 5%, #bf3e17 100%);
-  background-image: linear-gradient(#d0451b 5%, #bf3e17 100%);
-}
-
-#timer {
-  background-color: #ffae00;
-  background-image: linear-gradient(#ffae00 5% #c98c07 100%);
-  background-image: -webkit-linear-gradient(#ffae00 5% #c98c07 100%);
-}
-
-#skip {
-  background-color: #88878b;
-  background-image: -webkit-linear-gradient( #88878b 5% #6c6c6c 100%);
-  background-image: linear-gradient( #88878b 5% #6c6c6c 100%);
-}
-
-#submit_answer {
-  display: none;
-}
-
-/* Desktop Only */
-
-@media only screen and (min-width:667px) {
-  .default_button:active {
-    position: relative;
-    top: 1px;
-  }
-  #next_question:hover {
-    background-color: #1E62D0;
-    background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
-    background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
-  }
-  #buzz:hover {
-    background-color: #bc3315;
-    background-image: -webkit-linear-gradient(top, #bc3315, #d0451b);
-    background-image: linear-gradient(to bottom, #bc3315, #d0451b);
-  }
-  #timer:hover {
-    background-color: #e49e09;
-    background-image: -webkit-linear-gradient(top, #e49e08, #ffae00);
-    background-image: linear-gradient(to bottom, #e49e08, #ffae00);
-  }
-  #skip:hover {
-    background-color: #6c6c6c;
-    background-image: -webkit-linear-gradient(top, #6c6c6c, #88878b);
-    background-image: linear-gradient(top, #6c6c6c, #88878b);
-  }
-}
-
-/*iphone 5 */
-
-@media only screen and (max-width: 667px) {
-  header {
-    display: none;
-  }
-  footer {
-    display: none;
-  }
-  .default_button {
-    display: none;
-    border-radius: 0px;
-  }
-  textarea {
-    border-radius: 0px;
-  }
-  .question_gui {
-    width: 100%;
-    height: 90vh;
-    display: flex;
-    flex-direction: column;
-  }
-  .question_gui h1 {
-    display: none;
-  }
-  #buzz {
-    display: block;
-    position: fixed;
-    width: 75%;
-    height: 10vh;
-    right: 0;
-    bottom: 0;
-  }
-  #buzz:active {
-    background-color: #bc3315;
-    background-image: -webkit-linear-gradient(top, #bc3315, #d0451b);
-    background-image: linear-gradient(to bottom, #bc3315, #d0451b);
-  }
-  #next_question {
-    display: block;
-    width: 25%;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    height: 10vh;
-  }
-  #next_question:active {
-    background-color: #1E62D0;
-    background-image: -webkit-linear-gradient(top, #1E62D0, #3D94F6);
-    background-image: linear-gradient(to bottom, #1E62D0, #3D94F6);
-  }
-  #user_answer {
-    border-radius: 0px;
-    height: 10vh;
-  }
-  .result_box {
-    height: 10vh;
-  }
-  .question_box {
-    height: 80vh;
-  }
+footer {
+  padding: 30px;
+  color: #777;
+  background-color: #DEEBED;
+  text-align: center;
+  overflow: hidden;
 }
