@@ -3,22 +3,20 @@
 {%block script %}
 <!--specific scripts goes here -->
 <script src="static/scripts/question.js?q=1282527785" type="text/javascript"></script>
-<!-- <link rel="stylesheet" href="static/styles/question.css?q=1280549787" /> -->
-<link rel="stylesheet" href="E:\_GitHub\Enliten-Website\static\css\question.css" type="text/css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" /> {% endblock %} {% block content %}
-<section id="question_room">
-  <div class="container">
-    <h1>Practice Room</h1>
-    <form class="question_gui">
-      <button class="default_button" id="next_question" - href="#">Next Question</button>
-      <button class="default_button" id="buzz" href="#"><i class = "fa fa-bell"/></i>Buzz</button>
-      <button class="default_button" id="timer" href="#">Pause</button>
-      <button class="default_button" id="skip"><i class = "fa fa-fast-forward"/></i>Skip</button>
-      <button class="default_button" id="submit_answer" href="#">Submit Answer</button>
-      <input id="user_answer" type="text" name="response" autocomplete="off" />
-    </form>
-    <textarea class="result_box" id="result">THIS IS WHERE THE ANSWER WILL GO </textarea>
-    <textarea class="question_box" id="question">{{question}}QUESTION GOES HERE THIS WILL NEED A TEXT BOX</textarea>
-  </div>
-</section>
+<link rel="stylesheet" href="static/styles/question.css?q=1280549787" />
+<!-- <link rel="stylesheet" href="C:\Users\Henry Chang\Desktop\Projects\Enliten\static\styles\question.css" type="text/css" /> -->
+{% endblock %} {% block content %}
+<div class="question_gui">
+  <h1>Practice Room</h1>
+  <form>
+    <button class="default_button" id="next_question" - href="#">Next Question</button>
+    <button class="default_button" id="buzz" href="#"><i class = "fa fa-bell"/></i>Buzz</button>
+    <button class="default_button" id="timer" href="#">Pause</button>
+    <button class="default_button" id="skip"><i class = "fa fa-fast-forward"/></i>Skip</button>
+    <button class="default_button" id="submit_answer" href="#">Submit Answer</button>
+    <input class="answer_box" id="user_answer" type="text" name="response" autocomplete="off" placeholder="Submit Answer Here" />
+    <textarea class="result_box" id="result" disabled>Result </textarea>
+    <textarea class="question_box" id="question" disabled>{{question}}Press Next Question to begin!</textarea>
+  </form>
+</div>
 {% endblock %}
